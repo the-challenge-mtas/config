@@ -9,7 +9,7 @@ This repo might not be complete or up-to-date. </br>
 
 ## To Do
 
-- [ ] Add fusion config file.
-- [ ] Add base config file.
+- [x] Add fusion config file.
+- [x] Add base config file.
 - [ ] Add ESPhome config files.
-- [ ] Add (redacted) Zigbee2MQTT config files.
+- [x] Add (redacted) Zigbee2MQTT config files.
