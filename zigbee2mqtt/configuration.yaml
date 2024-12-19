@@ -1,0 +1,58 @@
+homeassistant: {}
+advanced:
+  network_key:
+    - REDACTED
+    - REDACTED
+    - REDACTED
+    - REDACTED
+    - REDACTED
+    - REDACTED
+    - REDACTED
+    - REDACTED
+    - REDACTED
+    - REDACTED
+    - REDACTED
+    - REDACTED
+    - REDACTED
+    - REDACTED
+    - REDACTED
+    - REDACTED
+  pan_id: REDACTED
+  ext_pan_id:
+    - REDACTED
+    - REDACTED
+    - REDACTED
+    - REDACTED
+    - REDACTED
+    - REDACTED
+    - REDACTED
+    - REDACTED
+  homeassistant_legacy_entity_attributes: false
+  legacy_api: false
+  legacy_availability_payload: false
+  log_level: info
+  last_seen: ISO_8601_local
+mqtt:
+  server: mqtt://core-mosquitto:1883
+  user: mqtt_user
+  password: mqtt_password
+serial:
+  port: tcp://core-silabs-multiprotocol:9999
+  adapter: ezsp
+frontend:
+  port: 8099
+device_options:
+  legacy: false
+permit_join: true
+devices:
+  '0xa4c13856dbd9bd74':
+    friendly_name: Radar
+  '0xa4c13821834230f7':
+    friendly_name: PIR
+  '0x881a14fffe35d56a':
+    friendly_name: '0x881a14fffe35d56a'
+  '0xa4c138a5615276b9':
+    friendly_name: Door
+  '0xa4c138843c57b5c0':
+    friendly_name: '0xa4c138843c57b5c0'
+availability: true
