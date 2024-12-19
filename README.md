@@ -12,3 +12,4 @@ This repo might not be complete or up-to-date. </br>
 - [ ] Add fusion config file.
 - [ ] Add base config file.
 - [ ] Add ESPhome config files.
+- [ ] Add (redacted) Zigbee2MQTT config files.
