@@ -1,0 +1,145 @@
+views:
+  - name: Overview
+    id: 9567342343475
+    sections:
+      - type: horizontal-stack
+        sections:
+          - name: Bedroom
+            items:
+              - id: 2123824025791
+                type: button
+                entity_id: light.bed_light
+              - id: 8758484142743
+                type: button
+                entity_id: media_player.bedroom
+            id: 4486943938352
+          - name: Security
+            items:
+              - id: 5599957255315
+                type: button
+                entity_id: alarm_control_panel.home_alarm
+              - id: 2596996497485
+                type: button
+                entity_id: alarm_control_panel.alarmo
+            id: 8692591046967
+        id: 3672511931228
+      - type: horizontal-stack
+        sections:
+          - name: Living Room
+            items:
+              - id: 6624223567409
+                type: button
+                entity_id: media_player.living_room
+              - id: 8063610544458
+                type: button
+                entity_id: cover.living_room_window
+              - id: 6766258715600
+                type: button
+                entity_id: fan.living_room_fan
+            id: 3847454073154
+          - name: Kitchen
+            items:
+              - id: 9610820511948
+                type: button
+                entity_id: media_player.kitchen
+              - id: 9581072093611
+                type: button
+                entity_id: cover.kitchen_window
+              - id: 8179868246232
+                type: button
+                entity_id: light.kitchen_lights
+              - id: 9715055062362
+                type: button
+                entity_id: lock.kitchen_door
+            id: 3024346106149
+        id: 4669511528962
+      - type: horizontal-stack
+        sections:
+          - name: Garage
+            items:
+              - id: 8526275100136
+                type: button
+                entity_id: cover.garage_door
+            id: 2215418348891
+          - name: Office
+            items:
+              - id: 3344381411679
+                type: button
+                entity_id: light.office_rgbw_lights
+                name: Office Lights
+              - id: 2561888463345
+                type: button
+                entity_id: air_quality.demo_air_quality_office
+                name: Air Quality Office
+            id: 2346531277864
+        id: 6225758651594
+      - type: horizontal-stack
+        sections:
+          - name: Vacuums
+            items:
+              - id: 21319374992
+                type: button
+                entity_id: vacuum.0_ground_floor
+                name: Ground floor Vacuum
+              - id: 591378870293
+                type: button
+                entity_id: vacuum.1_first_floor
+                name: First floor Vacuum
+              - id: 418410325037
+                type: button
+                entity_id: vacuum.2_second_floor
+                name: Second floor Vacuum
+              - id: 103601250798
+                type: button
+                entity_id: vacuum.3_third_floor
+                name: Third floor Vacuum
+              - id: 5115841649858
+                type: button
+                entity_id: vacuum.4_fourth_floor
+                name: Fourth floor Vacuum
+            id: 7642333869440
+          - name: Heating/Cooling
+            items:
+              - id: 6285545880576
+                type: button
+                entity_id: climate.hvac
+                name: HVAC
+              - id: 1294209556449
+                type: button
+                entity_id: climate.heatpump
+                name: Heat Pump
+              - id: 5408279310856
+                type: button
+                entity_id: climate.ecobee
+            id: 8568974478303
+        id: 639622874284
+  - name: Settings
+    id: 3649938684507
+    sections:
+      - name: Automation
+        items:
+          - id: 6919626247532
+            type: camera
+            entity_id: camera.demo_camera
+            stream: true
+        id: 3816316321654
+sidebar:
+  - id: 6882350543234
+    type: time
+    seconds: true
+  - id: 410779770849
+    type: date
+  - id: 5441505207673
+    type: weather_forecast
+    entity_id: weather.demo_weather_south
+    icon_pack: meteocons
+    days_to_show: 5
+  - id: 4927526621551
+    type: iframe
+    url: http://192.168.88.252:8123/config/integrations/dashboard
+    hide_mobile: true
+  - id: 327105226502
+    type: iframe
+    url: http://192.168.88.252:8123/config/automation/dashboard
+    hide_mobile: true
+sidebarWidth: 304
