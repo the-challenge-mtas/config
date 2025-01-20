@@ -1,0 +1,61 @@
+esphome:
+  name: esphome-web-6e3c78
+  friendly_name: ESPHome Web 6e3c78
+  min_version: 2024.11.0
+  name_add_mac_suffix: false
+
+esp8266:
+  board: esp01_1m
+
+# Enable logging
+logger:
+
+api:
+
+# Allow Over-The-Air updates
+ota:
+- platform: esphome
+
+wifi:
+  ssid: "MikroTik-8E7181-IoT"
+  password: "****************"
+
+# Define the ADC sensor with an ID
+sensor:
+  - platform: adc
+    pin: A0
+    name: "Light Sensor"
+    id: adc_sensor  # Define ID to reference it later
+    update_interval: 0.5s
+    filters:
+      # Scale ADC value (optional)
+      - multiply: 3.3  # Scale 0-1 to 0-3.3V, if needed
+
+# Define a custom text sensor to display the light level description
+text_sensor:
+  - platform: template
+    name: "Light Level Description"
+    lambda: |-
+      if (id(adc_sensor).state < 0.04) {
+        return {"Dark"};
+      } else if (id(adc_sensor).state < 0.8) {
+        return {"Dim"};
+      } else if (id(adc_sensor).state < 2.0) {
+        return {"Light"};
+      } else if (id(adc_sensor).state < 3.2) {
+        return {"Bright"};
+      } else {
+        return {"Very bright"};
+      }
+
+globals:
+  - id: light_sensor
+    type: float
+    initial_value: '0.0'
+
+interval:
+  - interval: 0.5s
+    then:
+      - lambda: |-
+          id(light_sensor) = id(adc_sensor).state;
+          ESP_LOGD("custom", "Analog Value = %.2f", id(light_sensor));
