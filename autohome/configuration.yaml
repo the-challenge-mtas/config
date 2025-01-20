@@ -1,19 +1,14 @@
-
 # Loads default set of integrations. Do not remove.
 default_config:
 
 # Load frontend themes from the themes folder
 frontend:
   themes: !include_dir_merge_named themes
+  # Example path: /home/paulus/dev/hass/frontend
+  development_repo: /config/autohome-frontend
 
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 
-demo:
-
-# HTTP server settings for CORS problems.
-#http:
-#  cors_allowed_origins:
-#  - http://192.168.88.252:8123
-#  - http://192.168.88.252:8099
+#demo:
